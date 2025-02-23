@@ -1,6 +1,6 @@
 # unsloth-challenge
 
-Task A: built a single kernel does 8bit then nf4 quantization
+Task A: built a single kernel does 8bit then nf4 dequantization
 
 btw what you want to do is not actually just nf4, its nested so you actually do 8bit on absmax and then do nf4 on weights
 my single triton kernel exactly does it
