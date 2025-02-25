@@ -1,8 +1,30 @@
 # Edit 1
 
+Task A: new triton kernel, optimized more, and some operations were on pytorch for previous one, now its
+all in triton at one kernel
+for all points:
+
+1. single_triton_kernel: Yes
+
+2.     if speedup <= 1.00: A_score -= 3
+    if speedup >= 1.05: A_score += 1
+    if speedup >= 1.10: A_score += 2
+    if speedup >= 1.15: A_score += 2
+speedup is above 1.15 for most my runs
+
+3. kernel_works_in_torch_compile: works with torch compile, look at code end of notebook where it uses it
+
+4. custom_asm_works: added custom llvm ptx asm
+
+5. uses_cache_eviction: used uses_cache_eviction
+
+6. tested_in_f16_and_bf16: tested both on a40 gpu
+
+
 Task E: built proper autograd function, previous one was doing chunking on only at the forward pass, now it does on both forward pass and backpropagation via a pytorch autograd function.
 
 for each point of task E:
+
 1. VRAM_50_percent_reduction: standalone lm head gets %68 vram reduction when batch size is 4.
 
 2. remove_float32_upcast: did not remove casting to float32 when first testing on ce
