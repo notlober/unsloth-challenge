@@ -1,5 +1,8 @@
 # Edit 1
 
+Task D: i am preparing a new pull request or continue existing, i realized first one is not enough, need to try a little more and
+support more features and models for flex attention.
+
 Task A: new triton kernel, optimized more, and some operations were on pytorch for previous one, now its
 all in triton at one kernel
 for all points:
